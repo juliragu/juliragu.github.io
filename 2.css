@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Reenie+Beanie&family=Urbanist:wght@100&display=swap');
+/* no tocar */
+.bg_navbar{
+    background-color: #000000 ;
+}
+    /* Botones*/
+    .logo {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      background: black; 
+      border: none;
+    }
+.car{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  background: none; 
+  border: none;
+}
+/* Botones */
+.one{
+  
+  font-family: 'Reenie Beanie', cursive;
+  margin: 0px 0px 6px 0px ;
+}
+.two{
+  font-family: 'Urbanist', sans-serif;
+}
+
+.LETRA{
+  font-size: 20px;
+  font-family: 'Reem Kufi', cursive;
+}
+.collapse .LETRA{
+    color:white
+}
+
+.img1{
+width: 100px;
+height: 79px;
+}
+/* desplazador 2 de imagenes  */
+.containerton{
+  display: flex;
+  width: 99vw;
+  height: 86vh;
+  margin: 0px 0px 0px 0px;
+  
+}
+
+/*margin:top(arriba),right(derecha),bottom(abajo),left(izquierda)*/
+.img3{
+ margin:80px;
+ border-radius: 15%;
+}
+.img4{
+  margin:80px;
+  border-radius: 15%;
+}
+.img5{
+  margin:80px;
+  border-radius: 15%;
+}
+.containerton .img3{
+  width: 100px;
+  flex-grow:1 ;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5 ease;
+}
+.containerton .img3:hover{
+  cursor:pointer;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.containerton .img4:hover{
+  cursor:pointer;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.containerton .img4{
+  width: 100px;
+  flex-grow:1 ;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5 ease;
+}
+.containerton .img5:hover{
+  cursor:pointer;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.containerton .img5{
+  width: 100px;
+  flex-grow:1 ;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5 ease;
+}
+.containerton .img5:hover{
+  cursor:pointer;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+/* desplazador 1 imagnes */
+.containerlov{
+  display: flex;
+  width: 99vw;
+  height: 68vh;
+}
+.containerlov .img2{
+  width: 0px;
+  flex-grow:1 ;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5 ease;
+}
+.containerlov .img2:hover{
+  cursor:pointer;
+  width: 100px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.containerconn{
+  display: flex;
+  width: 99vw;
+  height: 85.5vh;
+ 
+}
+.containerconn .img10{
+  width: 0px;
+  flex-grow:1 ;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5 ease;
+
+}
+.containerconn .img10:hover{
+  cursor:pointer;
+  width: 100px;
+  opacity: 1;
+  filter: contrast(120%);
+  
+}
+
+/* no tocar */
+* {margin:0; box-sizing:content-box;}
+.movible{
+  height:200vh;
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	font-family: Arial;
+  color:White;
+  font-size:min(30px, max(3.75vw, 25px));
+  text-align: center;
+ 
+  justify-content:center;
+  align-items: center;
+}
+
+label{cursor: pointer;}
+
+/* Contenedor para centrar */
+.ContainerCenter{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Input */
+input{display: none}
+
+
+
+/* Slider */
+.Carrusels{
+  height: 85vh;
+  width: 99.0vw;
+  position: relative;
+  overflow-x: hidden;
+}
+.Carrusel{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  overflow-y: hidden;
+  transition: all .5s ease;
+}
+/* Configuracion de elementos individuales */
+.Carrusels .Carrusel:nth-child(1) {background-image: url(img/bateria.jpg) }
+.Carrusels .Carrusel:nth-child(2) {background-image: url(img/guitarra.jpg);}
+.Carrusels .Carrusel:nth-child(3) {background-image: url(img/piano.jpg);}
+/* Estado 1 */
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+/* Estado 2 */
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+/* Estado 3 */
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-100%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+
+
+/* Flechas */
+.Carrusels .ArrowLeft, .Carrusels .ArrowRight{
+  position: absolute;
+  height: 100%;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  user-select: none;
+}
+.Carrusels .ArrowLeft{left: 0px;}
+.Carrusels .ArrowRight{right: 0px;}
+/* Configuracion de flechas individuales */
+#Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
+#Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
+#Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
+
+/* Condicionales para botón inferior */
+#Slider1:checked ~ .Selectors .Selector:nth-of-type(1) {background-color: #999999;}
+#Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
+#Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
+/* no tocar */
+.content12{
+  position: absolute;
+}
+.section_glass{
+ margin: 40px 0px 0px 250px;
+  width: 70vw;
+  height: 20vh;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(40, 117, 189, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  padding: 10px;
+  border-radius: 10px;
+ 
+  /* overflow-y: auto; */
+ 
+}
+.section_glassfun{
+  margin: 40px 0px 0px 200px;
+   width: 70vw;
+   height: 70vh;
+   background: rgba( 255, 255, 255, 0.25 );
+   box-shadow: 0 8px 32px 0 rgba(40, 117, 189, 0.37);
+   backdrop-filter: blur( 4px );
+   -webkit-backdrop-filter: blur( 4px );
+   padding: 10px;
+   border-radius: 10px;
+   text-align: center;
+   z-index: 1;
+   position: absolute;   
+   /* overflow-y: auto; */
+  
+ }
+ /* paginas 1 glases */
+.section_glass2{
+  margin: 0px 0px 20px 200px;
+   width: 75vw;
+   height: 26vh;
+   padding: 10px;
+   border-radius: 10px;
+   /* overflow-y: auto; */
+  
+ }
+ .section_glass3{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 11vh;
+   background: rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   
+   /* overflow-y: auto; */
+ }
+ .section_glass4{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 5vh;
+   background: rgba( 187, 5, 5, 100% );
+   padding: 0px;
+   /* overflow-y: auto; */
+ }
+ .section_glass5{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 8vh;
+   background: rgba( 187, 5, 5, 100% );
+   padding: 0px;
+   /* overflow-y: auto; */
+ }
+ .section_glass6{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 89vh;
+   background: rgba( 187, 5, 5, 100% );
+   padding: 0px;
+   /* overflow-y: auto; */
+ }
+ .section_glass7{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: px;
+   background: rgba( 187, 5, 5, 100% );
+   padding: 0px;
+   display: flex;
+   /* overflow-y: auto; */
+ }
+ /* final 1 glases */
+ /*margin:top(arriba),right(derecha),bottom(abajo),left(izquierda)*/
+ /* paginas 2 glases */
+ .section_glassp1{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 15vh;
+   background:   rgba( 187, 5, 5, 100% );
+   padding: 0px;
+   text-align: center;
+   color: white;
+   
+   /* overflow-y: auto; */
+ }
+
+ .section_glassp6{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 89vh;
+   background: rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   /* overflow-y: auto; */
+ }
+ .section_glassp71{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: px;
+   background:rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   display: flex;
+   /* overflow-y: auto; */
+ }
+ .section_glassp72{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 90px;
+   background:rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   display: flex;
+   
+   /* overflow-y: auto; */
+ }
+ .section_glassp71{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: px;
+   background:rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   display: flex;
+   /* overflow-y: auto; */
+ }
+ .section_glassp72{
+  margin: 0px 0px 0px 0px;
+   width: 99.0vw;
+   height: 90px;
+   background:rgba( 56, 50, 50, 100% );
+   padding: 0px;
+   display: flex;
+   
+   /* overflow-y: auto; */
+ }
+ /* LETRA */
+ .li1{
+  margin: 0px 0px 0px 90px;
+  color: white;
+  text-align: center;
+   }
+   .li1p{
+    margin: 0px 0px 0px 110px;
+    color: white;
+    text-align: center;
+     }
+   .lo1{
+  margin:0px 0px 0px 148px;
+  color: white;
+  text-align: center;
+   }
+   .lu1{
+  margin:0px 0px 0px 200px;
+  color: white;
+  text-align: center;
+   }
+   .lu1p{
+    margin:0px 0px 0px 190px;
+    color: white;
+    text-align: center;
+     }
+   /* FIN LETRA */
+ /* BOTONES */
+ .b1{
+  margin: 0px 0px 0px 110px;
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 12%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+ }
+ .b1p{
+  margin: 0px 0px 0px 270px;
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 12%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+ }
+ .b2{
+  margin:0px 0px 0px 300px;
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 12%;
+ 
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+ }
+ .b3{
+  margin:0px 0px 0px 280px;
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 12%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+ }
+ .b3p{
+  margin:0px 0px 0px 500px;
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 12%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+ }
+ /* FIN BOTONES */
+ /* fin 2 glases */
+ .li{
+margin: 0px 0px 0px 100px;
+color: black;
+ }
+ .lo{
+margin:0px 0px 0px 240px;
+color: black;
+ }
+ .lu{
+margin:0px 0px 0px 190px;
+color: #000000;
+ }
+
+
+ /* formulario */
+ 
+ .col-form-label{
+  color: white;
+  font-family:Reenie Beanie;
+font-size: 30px;
+ }
+.form-control{
+background:  rgba( 255, 255, 255, 0.25 );
+border: none;
+   }
+   /* parte 1 */
+   .section_glass1form{
+    margin: 0px 0px 0px 0px;
+     width: 99.0vw;
+     height: 70vh;
+     background: rgba( 56, 50, 50, 100% );
+     padding: 0px;
+     /* overflow-y: auto; */
+   }
+
+   .section_glassform{
+    margin: 0px 0px 0px 250px;
+     width: 60vw;
+     height: 20vh;                                                               
+     backdrop-filter: blur( 4px );
+     -webkit-backdrop-filter: blur( 4px );
+     padding: 10px;
+     border-radius: 10px;
+  position: absolute;
+   }
+  /*parte2 */
+  .formcontenedor{
+    margin: 0px 0px 0px 0px;
+     width: 99.0vw;
+     height: 42vh;
+     background:  rgba( 187, 5, 5, 100% );
+     padding: 0px;
+    display: flex;
+     /* overflow-y: auto; */
+   }
+   .izquierda{
+    margin-left:190px;
+     width:15vw;
+     height: 0px;
+   
+     backdrop-filter: blur( 4px );
+     -webkit-backdrop-filter: blur( 4px );
+     padding: 10px;
+     border-radius: 10px;  
+   
+   }
+   .derecha{
+    margin: 5px 0px 0px 410px;
+     width: 50vw;
+     height: 20vh;
+    
+     backdrop-filter: blur( 4px );
+     -webkit-backdrop-filter: blur( 4px );
+     padding: 10px;
+     border-radius: 10px;
+  position: absolute;
+   }
+  
+ .bptcompra{
+  margin: 25px 0px 0px -170px;
+  border-radius: 10%;
+  width: 400px; ;
+  height: 45px;
+  border: 0 0px 0px 0   black;
+  box-shadow: 0 5px 15px 0 rgba( 56, 50, 50, 100% ); ;
+  position: absolute;
+ }
+ /* fin formulario */
+/* compras */
+.logocompra {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  background: none; 
+  border: none;
+  background-color: black;
+  width: 70vw;
+   height: 20vh;
+   border-radius: 30px 30px 30px 30px;
+}
+.section_glasscompras{
+  margin: 40px 0px 0px 200px;
+   width: 70vw;
+   height: 20vh;
+   
+   backdrop-filter: blur( 4px );
+   -webkit-backdrop-filter: blur( 4px );
+   padding: 10px;
+   border-radius: 10px;
+   /* overflow-y: auto; */
+   position: absolute;
+ }
+.contcompra{
+  background: rgba( 187, 5, 5, 100% );
+  max-width:auto;
+  height: 100vh;
+}
+/* fin compras */
+/* contactanos */
+.contcompra{
+  background: rgba( 187, 5, 5, 100% );
+  max-width:auto;
+  height: 100vh;
+}
+.ovalo{
+background:rgba( 56, 50, 50, 100% ); ;
+width:800px ;
+height:46px ;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px 10px 0px 0px;
+color: white;
+font-family: 'Stint Ultra Expanded', cursive;
+}
+.caja{
+  background:white ;
+  width:800px ;
+height:46px ;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 0px 0px 10px 10px;
+font-family: 'Stint Ultra Expanded', cursive;
+font-size: 20px;
+}
+.contcontan{
+  background: rgba( 187, 5, 5, 100% );
+  max-width:auto;
+  height: 100vh;
+  display: flex;
+  margin: 0px 0px 0px 0px;
+}
+.infocontacta{
+  position: absolute;
+  margin: 100px 0px 0px 400px;
+}
+/* fin contactanos */
+/* ------------------------ */
+ .footer{
+  height: 100px;
+  background:rgba( 56, 50, 50, 100% );
+  color: white;
+ }

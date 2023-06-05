@@ -1,0 +1,14 @@
+@font-face{
+    font-family: "Caviar Dreams";
+    src: url("fonts/Caviar Dreams.otd");
+}
+body{
+    background: radial-gradient(at top, orange , #85929E);
+
+}
+.bg-light {
+    background-color: gray!important;
+}
+h1, h2, h3, h4 {
+    font-family: "Caviar Dreams";
+}
